@@ -1,0 +1,59 @@
+/* COMPONENTS: header/nav, buttons, footer, placeholder frames, reveals */
+
+/* ---- Buttons: fill wipes to yellow (red) or white (outline) on hover ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.6rem;border:2px solid var(--red);font:700 .95rem/1 var(--body);letter-spacing:.02em;text-decoration:none;cursor:pointer;
+  background:linear-gradient(var(--yellow),var(--yellow)) no-repeat left/0% 100%;transition:background-size .35s var(--ease),color .2s,border-color .2s}
+.btn-red{background-color:var(--red);color:var(--white)}
+.btn-red:hover{background-size:100% 100%;color:var(--black);border-color:var(--yellow)}
+.btn-line{background-color:transparent;border-color:currentColor;background-image:linear-gradient(var(--white),var(--white))}
+.btn-line:hover{background-size:100% 100%;color:var(--black);border-color:var(--white)}
+.light .btn-line,.paper .btn-line{background-image:linear-gradient(var(--black),var(--black))}
+.light .btn-line:hover,.paper .btn-line:hover{color:var(--white);border-color:var(--black)}
+.btn:active{transform:translateY(1px)}
+
+/* ---- Header ---- */
+.site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:1rem;height:var(--header-h);padding-inline:var(--gutter);background:var(--black);border-bottom:1px solid #2a2a2a}
+.brand{margin-right:auto;text-decoration:none;display:flex;align-items:center}
+.brand img{height:48px;width:auto}
+.wordmark{font:400 1.6rem/1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.wordmark small{display:block;font:600 .6rem/1.2 var(--body);letter-spacing:.18em;color:var(--yellow)}
+.nav{display:flex;align-items:center;gap:clamp(1rem,2.5vw,2.25rem)}
+.nav a:not(.btn){position:relative;text-decoration:none;font-weight:600;padding-block:.5rem}
+.nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:.15rem;height:2px;background:var(--red-on-dark);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav a:not(.btn):hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+.nav .btn{min-height:40px;padding:.55rem 1.1rem}
+.sound-toggle,.menu-btn{background:none;border:1px solid #444;color:var(--white);font:600 .8rem/1 var(--body);padding:.6rem .8rem;min-height:40px;cursor:pointer}
+.sound-toggle[aria-pressed="true"]{border-color:var(--yellow);color:var(--yellow)}
+.menu-btn{display:none}
+
+@media (max-width:860px){
+  .menu-btn{display:inline-flex;align-items:center}
+  .nav{position:fixed;inset:var(--header-h) 0 0 0;flex-direction:column;align-items:flex-start;justify-content:center;gap:1.25rem;padding:var(--gutter);background:var(--black);
+    transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .35s var(--ease),visibility 0s .35s}
+  .nav a:not(.btn){font:400 clamp(2.5rem,12vw,4rem)/1 var(--display);text-transform:uppercase}
+  .nav .btn{align-self:stretch;min-height:56px;margin-top:1rem}
+  body.nav-open{overflow:hidden}
+  body.nav-open .nav{opacity:1;transform:none;visibility:visible;transition-delay:0s}
+}
+
+/* ---- Footer ---- */
+.site-footer{background:var(--black);border-top:4px solid var(--red);padding-block:clamp(3rem,7vw,5rem) 2rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem}
+.footer-grid h2{font:700 .8rem/1 var(--body);letter-spacing:.14em;color:var(--yellow);margin-bottom:1rem}
+.footer-grid li+li{margin-top:.5rem}
+.footer-grid a{text-decoration:none}
+.footer-grid a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--red-on-dark)}
+.footer-base{margin-top:3rem;padding-top:1.25rem;border-top:1px solid #2a2a2a;color:#b5b5b5;font-size:.9rem}
+@media (max-width:860px){.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>:first-child{grid-column:1/-1}}
+@media (max-width:480px){.footer-grid{grid-template-columns:1fr}}
+
+/* ---- Placeholder frame (shown while a photo src is empty) ---- */
+.ph{position:relative;display:grid;place-items:center;width:100%;height:100%;min-height:200px;background:#1c1c1c;color:#bdbdbd;font:600 .85rem/1.3 var(--body);text-align:center;padding:1rem}
+.ph::before,.ph::after{content:"";position:absolute;width:22px;height:22px;border:2px solid var(--yellow)}
+.ph::before{top:12px;left:12px;border-right:0;border-bottom:0}
+.ph::after{right:12px;bottom:12px;border-left:0;border-top:0}
+
+/* ---- Image reveal: one deliberate effect, used on key images only ---- */
+.reveal-img{clip-path:inset(0 0 100% 0);transition:clip-path .9s var(--ease)}
+.reveal-img.is-in{clip-path:inset(0)}
+@media (prefers-reduced-motion:reduce){.reveal-img{clip-path:none}}

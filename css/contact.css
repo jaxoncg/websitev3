@@ -1,0 +1,24 @@
+/* CONTACT + FORM */
+.contact{display:grid;grid-template-columns:7fr 5fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.field{display:grid;gap:.4rem;margin-bottom:1.25rem}
+.field label{font-weight:600}
+.opt{font-weight:400;color:#b5b5b5}
+.field input,.field select,.field textarea{width:100%;min-height:52px;padding:.8rem 1rem;font:inherit;color:var(--white);background:var(--black);border:2px solid #8c8c8c;border-radius:0;color-scheme:dark}
+.field textarea{min-height:140px;resize:vertical}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:var(--white)}
+.field [aria-invalid="true"]{border-color:var(--red-on-dark)}
+.err{color:var(--red-on-dark);font-weight:600;font-size:.95rem}
+.err:empty{display:none}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.pkg-note{border-left:4px solid var(--yellow);padding:.5rem 1rem;margin-bottom:1.5rem;font-weight:600}
+.status{padding:1rem 1.25rem;margin-top:1.25rem;border:2px solid var(--yellow)}
+.status.error{border-color:var(--red-on-dark)}
+#status:empty{display:none}
+.thanks{padding:clamp(1.5rem,4vw,3rem);border:2px solid var(--yellow)}
+.thanks p{margin:1rem 0 1.5rem}
+.direct h2{margin-bottom:1.5rem}
+.direct li+li{margin-top:1rem}
+.direct a{overflow-wrap:anywhere}
+.direct .big{font:400 clamp(1.5rem,3vw,2.25rem)/1.1 var(--display);text-transform:uppercase}
+@media (max-width:760px){.contact{grid-template-columns:1fr}.row2{grid-template-columns:1fr}.field input,.field select{min-height:56px}#send{width:100%}}

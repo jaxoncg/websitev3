@@ -1,0 +1,21 @@
+/* PRICING */
+.price-jump{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.price-jump a{display:inline-flex;align-items:center;min-height:44px;padding:.5rem 1rem;border:2px solid currentColor;font-weight:600;text-decoration:none;transition:background .2s,color .2s}
+.price-jump a:hover{background:var(--yellow);color:var(--black);border-color:var(--yellow)}
+.price-svc{scroll-margin-top:var(--header-h)}
+.price-svc .wrap{display:grid;grid-template-columns:4fr 8fr;gap:var(--gutter)}
+.svc-title{position:sticky;top:calc(var(--header-h) + 1.5rem);align-self:start}
+.pkg{display:grid;grid-template-columns:1.3fr 1fr auto;gap:1rem 2rem;align-items:start;padding-block:1.5rem;border-top:2px solid currentColor}
+.pkg:last-child{border-bottom:2px solid currentColor}
+.pkg-time{font-weight:600;margin:.35rem 0 .5rem}
+.pkg-inc li{position:relative;padding-left:1.1rem}
+.pkg-inc li+li{margin-top:.35rem}
+.pkg-inc li::before{content:"";position:absolute;left:0;top:.8em;width:.55rem;height:2px;background:var(--red)}
+.pkg-buy{text-align:right}
+.pkg-price{font:400 clamp(2.25rem,4vw,3rem)/1 var(--display);margin-bottom:.75rem}
+.pkg-price small{font:500 .9rem var(--body);margin-right:.4rem}
+.pkg-buy .tag{display:block;margin:0 0 .75rem auto;width:max-content}
+@media (max-width:900px){
+  .price-svc .wrap{grid-template-columns:1fr}.svc-title{position:static}
+  .pkg{grid-template-columns:1fr}.pkg-buy{text-align:left}.pkg-buy .tag{margin-left:0}
+}

@@ -1,0 +1,53 @@
+/* BASE: tokens, fonts, reset, type, layout primitives.
+   Fonts: put anton.woff2 and inter.woff2 in assets/fonts/ (see README).
+   Until then, system fallbacks are used. */
+@font-face{font-family:"Anton";src:url("../assets/fonts/anton.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Inter";src:url("../assets/fonts/inter.woff2") format("woff2");font-weight:100 900;font-display:swap}
+
+:root{
+  --black:#000; --white:#fff; --ink:#111; --grey:#6b6b6b; --line:#d9d9d9; --paper:#f2f2f2;
+  --red:#e10600;          /* buttons, fills (white text passes AA) */
+  --red-on-dark:#ff3b30;  /* red text on black */
+  --yellow:#ffc800;
+  --display:"Anton","Impact","Haettenschweiler","Arial Narrow",sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --gutter:clamp(1.25rem,4vw,3.5rem);
+  --header-h:64px;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:400 1.0625rem/1.6 var(--body);color:var(--white);background:var(--black);overflow-x:hidden}
+img,picture,svg{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+main{display:block}
+
+h1,h2,h3,.display{font-family:var(--display);font-weight:400;line-height:.95;letter-spacing:.005em;text-transform:uppercase}
+.d-xxl{font-size:clamp(4.5rem,19vw,17rem)}
+.d-xl{font-size:clamp(3rem,9vw,8rem)}
+.d-lg{font-size:clamp(2.25rem,5.5vw,4.5rem)}
+.d-md{font-size:clamp(1.5rem,3vw,2.25rem)}
+.lede{font-size:clamp(1.125rem,1.6vw,1.375rem);max-width:46ch}
+p{max-width:62ch}
+
+.wrap{padding-inline:var(--gutter);max-width:1600px;margin-inline:auto}
+.section{padding-block:clamp(4rem,10vw,9rem)}
+.section.light{background:var(--white);color:var(--ink)}
+.section.paper{background:var(--paper);color:var(--ink)}
+.section.light .muted,.section.paper .muted{color:#4a4a4a}
+.muted{color:#b5b5b5}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:var(--gutter);top:-4rem;z-index:100;background:var(--yellow);color:var(--black);padding:.75rem 1rem;font-weight:700;transition:top .2s}
+.skip:focus{top:.75rem}
+
+/* Visible focus on any background: black ring + yellow halo */
+:focus-visible{outline:3px solid var(--black);box-shadow:0 0 0 6px var(--yellow);outline-offset:0}
+:focus:not(:focus-visible){outline:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
