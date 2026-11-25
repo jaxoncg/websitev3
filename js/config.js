@@ -13,7 +13,7 @@ window.SITE_CONFIG = {
     email: 'REPLACE-ME@example.com',   // REPLACE with your real inquiry email
     phone: '',                          // optional, e.g. '(859) 555-0100'
     /* ---- 2. SERVICE AREA (used in footer + SEO text; edit freely) ---- */
-    serviceArea: 'REPLACE: your city/region, e.g. "Lexington, KY and nearby"'
+    serviceArea: 'Monticello, KY and nearby'
   },
 
   /* ---- 3. SOCIAL LINKS (paste full profile URLs; '' hides the link) ---- */
