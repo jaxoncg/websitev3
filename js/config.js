@@ -82,12 +82,12 @@ window.SITE_CONFIG = {
      shape: 'tall' | 'wide' | 'square' controls the grid crop.          */
   portfolio: [
     { id: 'p1',  src: 'https://i.postimg.cc/DfQQsZMS/WNU6433.jpg', w: 1600, h: 1067, shape: 'wide',   category: 'Sports',     alt: 'Replace: athlete mid-action' },
-    { id: 'p2',  src: '', w: 1067, h: 1600, shape: 'tall',   category: 'Portrait',   alt: 'Replace: portrait photo' },
-    { id: 'p3',  src: '', w: 1600, h: 1067, shape: 'wide',   category: 'Event',      alt: 'Replace: event moment' },
-    { id: 'p4',  src: '', w: 1200, h: 1200, shape: 'square', category: 'Commercial', alt: 'Replace: business or product photo' },
-    { id: 'p5',  src: '', w: 1067, h: 1600, shape: 'tall',   category: 'Wedding',    alt: 'Replace: wedding photo' },
-    { id: 'p6',  src: '', w: 1200, h: 1200, shape: 'square', category: 'Sports',     alt: 'Replace: sports photo' },
-    { id: 'p7',  src: '', w: 1600, h: 1067, shape: 'wide',   category: 'Portrait',   alt: 'Replace: portrait photo' },
+    { id: 'p2',  src: 'https://i.postimg.cc/vTSZ95R3/WNU1938.jpg', w: 1067, h: 1600, shape: 'tall',   category: 'Portrait',   alt: 'Replace: portrait photo' },
+    { id: 'p3',  src: 'https://i.postimg.cc/j5Mx0yjY/DSC-0434.jpg', w: 1600, h: 1067, shape: 'wide',   category: 'Event',      alt: 'Replace: event moment' },
+    { id: 'p4',  src: 'https://i.postimg.cc/C1rg6YvH/DSC2226.jpg', w: 1200, h: 1200, shape: 'square', category: 'Commercial', alt: 'Replace: business or product photo' },
+    { id: 'p5',  src: 'https://i.postimg.cc/zDRzPHr3/DSC0650.jpg', w: 1067, h: 1600, shape: 'tall',   category: 'Wedding',    alt: 'Replace: wedding photo' },
+    { id: 'p6',  src: 'https://i.postimg.cc/15JjGMj4/WNU7049.jpg', w: 1200, h: 1200, shape: 'square', category: 'Sports',     alt: 'Replace: sports photo' },
+    { id: 'p7',  src: 'https://i.postimg.cc/bJgQ7Vb8/WNU1867.jpg', w: 1600, h: 1067, shape: 'wide',   category: 'Portrait',   alt: 'Replace: portrait photo' },
     { id: 'p8',  src: '', w: 1067, h: 1600, shape: 'tall',   category: 'Event',      alt: 'Replace: event photo' },
     { id: 'p9',  src: '', w: 1200, h: 1200, shape: 'square', category: 'Wedding',    alt: 'Replace: wedding photo' },
     { id: 'p10', src: '', w: 1600, h: 1067, shape: 'wide',   category: 'Commercial', alt: 'Replace: commercial photo' }
