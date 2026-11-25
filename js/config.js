@@ -81,7 +81,7 @@ window.SITE_CONFIG = {
      (prevents layout shift). While src is '' a labeled frame shows.
      shape: 'tall' | 'wide' | 'square' controls the grid crop.          */
   portfolio: [
-    { id: 'p1',  src: '', w: 1600, h: 1067, shape: 'wide',   category: 'Sports',     alt: 'Replace: athlete mid-action' },
+    { id: 'p1',  src: 'assets/images/_WNU6433.jpg', w: 1600, h: 1067, shape: 'wide',   category: 'Sports',     alt: 'Replace: athlete mid-action' },
     { id: 'p2',  src: '', w: 1067, h: 1600, shape: 'tall',   category: 'Portrait',   alt: 'Replace: portrait photo' },
     { id: 'p3',  src: '', w: 1600, h: 1067, shape: 'wide',   category: 'Event',      alt: 'Replace: event moment' },
     { id: 'p4',  src: '', w: 1200, h: 1200, shape: 'square', category: 'Commercial', alt: 'Replace: business or product photo' },
